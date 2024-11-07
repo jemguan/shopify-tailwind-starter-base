@@ -24,6 +24,12 @@
           "settings": {
           }
         },
+        "custom_liquid_wnrM8p": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign hotsale_ad = product.metafields.custom.hotsalead -%}\n{%- if hotsale_ad != blank -%}\n<div class=\"hotsale-message\">{{ hotsale_ad | escape }}</div>\n<style>.hotsale-message{color:red;font-style:italic;}</style>\n{%- endif -%}"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -53,12 +59,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "custom_liquid_wnrM8p": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% assign hotsale_ad = product.metafields.custom.hotsalead %}\n{% if hotsale_ad != blank %}\n  <div class=\"hotsale-message\">\n    {{ hotsale_ad | escape }}\n  </div>\n{% endif %}"
           }
         },
         "description": {
@@ -112,12 +112,12 @@
       "block_order": [
         "vendor",
         "title",
+        "custom_liquid_wnrM8p",
         "caption",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "custom_liquid_wnrM8p",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
